@@ -1,0 +1,11 @@
+.row
+  .span6.offset3
+    = form_for(@pair) do |f|
+      = f.label :first_participant
+      = f.text_field :first_participant
+
+      = f.label :second_participant
+      = f.text_field :second_participant
+
+
+      = f.submit "Hit it", class: "btn btn-large btn-primary"

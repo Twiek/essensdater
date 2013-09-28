@@ -1,6 +1,10 @@
 Essensdates::Application.routes.draw do
+  # get "lunch_dates/new"
+
   # get "static_pages/home"
   root to: 'static_pages#home'
+
+  resources :pairs, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
