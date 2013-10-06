@@ -1,3 +1,5 @@
 class LunchDate < ActiveRecord::Base
-  has_many :pairs
+  attr_accessible :pairs_attributes
+  has_many :pairs, :dependent => :destroy
+  accepts_nested_attributes_for :pairs
 end

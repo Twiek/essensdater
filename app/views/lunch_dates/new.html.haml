@@ -1,2 +1,11 @@
-%h1 LunchDates#new
-%p Find me in app/views/lunch_dates/new.html.haml
+.row
+  .span6.offset3
+    = form_for @lunch_date do |f|
+      = f.fields_for :pairs do |pair|
+        = pair.label :first_participant
+        = pair.text_field :first_participant
+
+        = pair.label :second_participant
+        = pair.text_field :second_participant
+
+      = f.submit "Hit it", class: "btn btn-large btn-primary"
